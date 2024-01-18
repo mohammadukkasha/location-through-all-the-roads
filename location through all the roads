@@ -1,0 +1,29 @@
+def my_location():
+    locations = [
+        ("Shah_e_faisal", "open time morning 9 to 12 (evening time 4 to 7)"),
+        ("Airport", "open any time"),
+        ("Mazar_e_quaid", "open time morning 5 to 8 (evening time 3 to 9)"),
+        ("liaqtabad", "open time morning 8 to 10 (evening time 2 to 7)"),
+        ("saddar", "open time morning 9 to 10 (evening time 3 to 9)"),
+        ("Buffer_zone", "open time morning 7 to 5 (evening time 2 to 7)"),
+        ("Nersery", "open time morning 8 to 10 (evening time 2 to 7)"),
+        ("new_Nazmabad", "open time morning 8 to 10 (evening time 2 to 7)"),
+        ("Model_colony", "open time morning 4 to 10 (evening time 9 to 7)"),
+        ("Mehmodabad", "open time morning 8 to 11 (evening time 5 to 7)")
+    ]
+
+    for data in locations:
+        name = input(f"What is your location at {data[0]}? ")
+        fname = input(f"Where are you going at {data[0]}? ")
+
+        print(f"{name}, you said you are at {data[0]} and going to {fname}.")
+        
+        if input("Is this correct? (yes/no): ").lower() == "yes":
+            print(f"{name}, {data[0]} is {data[1]}.")
+            print("You can go.")
+        else:
+            print (locations)
+            input("Is this correct? (yes/no): ").lower() == "yes"
+            print(f"{name}, {data[0]} is {data[1]}.")
+            print("You can go.")
+my_location()
